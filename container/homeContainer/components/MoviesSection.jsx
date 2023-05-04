@@ -39,7 +39,7 @@ const MoviesSection = ({ getMovies }) => {
           </div>
         </Swiper>
       ) : (
-        <p>loadings</p>
+        <p>loading</p>
       )}
     </div>
   );

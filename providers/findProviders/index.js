@@ -23,7 +23,7 @@ export const FindProvider = ({ children }) => {
     try {
       setLoading(true);
       const payload = {
-        url: `http://gateway.marvel.com/v1/public/characters?name=${search}&ts=1&apikey=ea6ea9d4c5e0f728bc62e298c7c88489&hash=354113ac364b3629affa064b1a314a5e`,
+        url: `${process.env.url}characters?name=${search}&ts=1&apikey=${process.env.public}&hash=${process.env.hash}`,
       };
       const {
         data: { data: response },

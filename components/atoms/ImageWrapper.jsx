@@ -6,8 +6,9 @@ const ImageWrapper = ({ src, alt, className, height, width, id = "" }) => {
       <Image
         id={id}
         src={src}
-        layout="fill"
         alt={alt}
+        width={0}
+        height={0}
         priority
         sizes="(max-width: 500px)"
         className={className}

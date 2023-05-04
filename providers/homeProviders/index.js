@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import ApiRequest from "../../config/config";
+import dotenv from "dotenv";
+dotenv.config();
 
 export function createCtx() {
   const ctx = createContext(undefined);

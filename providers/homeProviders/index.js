@@ -1,7 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import ApiRequest from "../../config/config";
-import dotenv from "dotenv";
-dotenv.config();
 
 export function createCtx() {
   const ctx = createContext(undefined);
@@ -20,14 +18,11 @@ export const HomeProvider = ({ children }) => {
   const [character, setCharacter] = useState([]);
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState([]);
-  let url = process.env.url;
-  let publics = process.env.public;
-  let hash = process.env.hash;
 
   const getAllComics = async () => {
     try {
       const payload = {
-        url: `${url}comics?ts=1&apikey=${publics}&hash=${hash}`,
+        url: `${process.env.URL}comics?ts=1&apikey=${process.env.PUBLIC}&hash=${process.env.HASH}`,
       };
       const {
         data: { data: response },

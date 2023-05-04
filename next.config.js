@@ -9,11 +9,6 @@ const nextConfig = {
       "res.cloudinary.com",
     ],
   },
-  env: {
-    url: process.env.url,
-    public: process.env.public,
-    hash: process.env.hash,
-  },
 };
 
 module.exports = nextConfig;

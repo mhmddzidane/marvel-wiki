@@ -18,11 +18,14 @@ export const HomeProvider = ({ children }) => {
   const [character, setCharacter] = useState([]);
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState([]);
+  let url = process.env.url;
+  let publics = process.env.public;
+  let hash = process.env.hash;
 
   const getAllComics = async () => {
     try {
       const payload = {
-        url: `${process.env.url}comics?ts=1&apikey=${process.env.public}&hash=${process.env.hash}`,
+        url: `${url}comics?ts=1&apikey=${publics}&hash=${hash}`,
       };
       const {
         data: { data: response },
